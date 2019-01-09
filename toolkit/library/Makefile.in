@@ -200,7 +200,6 @@ ifeq ($(MOZ_WIDGET_TOOLKIT),cocoa)
 CXXFLAGS	+= $(TK_CFLAGS)
 EXTRA_DSO_LDOPTS += \
 	-framework SystemConfiguration \
-	-framework QuickTime \
 	-framework IOKit \
 	-lcrypto \
 	$(TK_LIBS) \

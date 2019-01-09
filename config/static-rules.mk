@@ -21,5 +21,5 @@ LDFLAGS	+= -Wl,-LD_LAYOUT:lgot_buffer=80
 endif
 
 ifneq (,$(filter mac cocoa,$(MOZ_WIDGET_TOOLKIT)))
-LIBS	+= -framework QuickTime -framework IOKit -lcrypto
+LIBS	+= -framework IOKit -lcrypto
 endif

@@ -162,6 +162,5 @@ LOCAL_INCLUDES	= \
 	$(NULL)
 
 LDFLAGS	+= \
-	-framework QuickTime \
 	-framework IOKit \
 	$(NULL)

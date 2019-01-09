@@ -73,7 +73,7 @@ include $(topsrcdir)/config/rules.mk
 DEFINES += -DXPCOM_TRANSLATE_NSGM_ENTRY_POINT
 
 ifeq ($(MOZ_WIDGET_TOOLKIT),cocoa)
-OS_LIBS	+= -framework QuickTime
+OS_LIBS	+= 
 endif
 
 ifeq ($(OS_ARCH),WINNT)
