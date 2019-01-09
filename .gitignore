@@ -2,7 +2,8 @@
 
 # Filenames that should be ignored wherever they appear
 *~
-*.py(c|o)
+*.pyc
+*.pyo
 (^|/)TAGS$
 .DS_Store
 
