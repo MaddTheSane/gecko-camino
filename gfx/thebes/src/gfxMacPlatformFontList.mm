@@ -277,6 +277,7 @@ MacOSFontEntry::ReadCMAP()
         }
     }
 
+#ifndef __LP64__
     if ((gfxPlatformMac::GetPlatform()->OSXVersion() &
          MAC_OS_X_MAJOR_VERSION_MASK) == MAC_OS_X_VERSION_10_6_HEX) {
         // even ruder hack - LiGothic font on 10.6 has a bad glyph for U+775B
@@ -292,6 +293,7 @@ MacOSFontEntry::ReadCMAP()
             }
         }
     }
+#endif
 
     PR_LOG(gFontInfoLog, PR_LOG_DEBUG, ("(fontinit-cmap) psname: %s, size: %d\n", 
                                         NS_ConvertUTF16toUTF8(mName).get(), mCharacterMap.GetSize()));

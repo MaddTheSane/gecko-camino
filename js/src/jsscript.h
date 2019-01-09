@@ -191,8 +191,8 @@ StackDepth(JSScript *script)
  */
 #define JS_GET_SCRIPT_ATOM(script_, pc_, index, atom)                         \
     JS_BEGIN_MACRO                                                            \
-        if ((pc_) < (script_)->code ||                                        \
-            (script_)->code + (script_)->length <= (pc_)) {                   \
+        if (uintptr_t(pc_) < uintptr_t((script_)->code) ||                                        \
+            uintptr_t((script_)->code) + uintptr_t((script_)->length) <= uintptr_t(pc_)) {                   \
             JS_ASSERT((size_t)(index) < js_common_atom_count);                \
             (atom) = COMMON_ATOMS_START(&cx->runtime->atomState)[index];      \
         } else {                                                              \
